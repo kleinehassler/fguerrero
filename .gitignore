@@ -1,4 +1,4 @@
-
+tempo/
 images/
 
 config.dat
@@ -9,15 +9,9 @@ config.dat
 *.fxp
 *.bak
 *.backup
-*.dct
-*.dcx
-*.dbc
-*.dbf
-*.cdx
-*.fpt
 *.doc
 *.docx
 *.xls
 *.xlsx
-*.exe
+
 
