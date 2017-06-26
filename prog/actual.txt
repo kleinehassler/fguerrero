@@ -1,0 +1,382 @@
+ALTER TABLE auditoria ADD COLUMN nomdoc varchar(25);
+ALTER TABLE auditoria ADD COLUMN observa varchar(200);
+
+ alter table usuarios add printasic bool DEFAULT false;
+ alter table usuarios add confimp bool DEFAULT true;
+ 
+ alter table imagenrep add proceso bool DEFAULT false;
+ 
+ ALTER TABLE usuarios ADD COLUMN escajero bool DEFAULT 'f';
+
+
+ALTER TABLE auditoria ADD COLUMN campo varchar(100);
+ALTER TABLE auditoria ADD COLUMN valorant varchar(250);
+ALTER TABLE auditoria ADD COLUMN valoract varchar(250);
+
+ALTER TABLE documents ADD COLUMN femiauto date;
+
+ALTER TABLE aneiva ADD COLUMN femiauto date;
+
+--------------------------------------------------------------------------
+ALTER TABLE items ADD COLUMN inactivo bool DEFAULT 'f';
+
+CREATE TRIGGER documents_actualiza
+  AFTER UPDATE
+  ON documents
+  FOR EACH ROW
+  EXECUTE PROCEDURE proceso_audit();
+  
+  
+  ALTER TABLE docuse ADD COLUMN ajucon bool DEFAULT 'f';
+-----------------------------------------------------------------------
+AJUSTES CONTABLES
+
+	ADQ0703B
+	FCONSULTAS -> SECUDOC, CONDOC
+	VIEWS	-> VSECUDOC, VDOCUSMALL, VDOCUMENTS, VDOCUSMAL
+	CONTADOC
+	CLASE GENERAL	-> PRODOCU, DOCSINDET, DOCUMENTO EN CERO, PROPIEDAD AJUCON
+	REGISTRO EN SET0101
+	CON0305 -> TERCERO DE TIPO 6
+	adq0701b ->	ajucon, descuadrado
+-----------------------------------------------------------------------
+ALTER TABLE empleados ADD COLUMN profonres bool DEFAULT 't';
+	
+
+CREATE TABLE otroscre
+(
+   idcredito serial, 
+   tipo int4 NOT NULL, 
+   idsujeto int4 NOT NULL, 
+   scredito float8 DEFAULT 0, 
+   idplancuenta int4, 
+   idempresa int4, 
+   CONSTRAINT pk_creditos PRIMARY KEY (idcredito), 
+   CONSTRAINT fk_sujetos FOREIGN KEY (idsujeto) REFERENCES sujetos (idsujeto)    ON UPDATE CASCADE ON DELETE RESTRICT, 
+   CONSTRAINT fk_empresas FOREIGN KEY (idempresa) REFERENCES sujetos (idsujeto)    ON UPDATE CASCADE ON DELETE RESTRICT
+) WITHOUT OIDS;
+	
+	
+ALTER TABLE otroscre ADD CONSTRAINT ucredito UNIQUE (tipo, idempresa, idsujeto);
+ALTER TABLE otroscre ADD COLUMN diacorte int2;	
+
+----------------------------------------------------------------------
+select serie, tipo, min(numero) as numero from pvta_cab where ttod(fecha)>date(2009,07,31) group by serie, tipo
+
+ALTER TABLE accdoc ADD COLUMN consul bool DEFAULT 'f';
+
+
+CREATE TABLE series
+(
+   idserie serial, 
+   secuencia int4 NOT NULL, 
+   serie varchar(50) NOT NULL, 
+   CONSTRAINT pk_series PRIMARY KEY (idserie), 
+   CONSTRAINT secuencia FOREIGN KEY (secuencia) REFERENCES detadoci (secuencia)    ON UPDATE CASCADE ON DELETE RESTRICT
+) WITHOUT OIDS;
+
+CREATE TABLE idsaldosis
+(
+   idsaldosis serial, 
+   idsaldosi int4 NOT NULL, 
+   serie varchar(50) NOT NULL, 
+   CONSTRAINT pk_saldosis PRIMARY KEY (idsaldosis), 
+   CONSTRAINT fk_idsaldosi FOREIGN KEY (idsaldosi) REFERENCES saldosi (idsaldosi)    ON UPDATE CASCADE ON DELETE RESTRICT
+) WITHOUT OIDS;
+
+****************************************************************
+PRODUCTOS NO VENDIDOS DESDE HACE 1 ANIO
+045 PRODUCTOS NAVIDE;OS, 038 JUGUETES
+
+SELECT CODIGO, NOMBRE FROM ARTICULOS WHERE GRUPO<>'045.' AND GRUPO<>'038.' AND CODIGO NOT IN ;
+(SELECT CODIGO FROM PVTA_MOV D, PVTA_CAB P WHERE D.ID=P.ID AND TTOD(P.FECHA)>=DATE(2008,10,01))
+
+
+select code from documents where montototal<>subconiva+subsiniva-(descuconiva+descusiniva)+ivavalor+recargo
+select code, (subconiva-descuconiva)*0.12, ivavalor from documents where round(((subconiva-descuconiva)*0.12)::numeric,2)<>ivavalor
+
+
+update documents set recargo=round((montototal-subconiva-subsiniva+(descuconiva+descusiniva)-ivavalor)::numeric,2) 
+where round(montototal::numeric,2)<>round((subconiva+subsiniva-(descuconiva+descusiniva)+ivavalor+recargo)::numeric,2) ;
+__________________________________________
+
+ALTER TABLE sujetos ADD COLUMN fec_aper date;
+ALTER TABLE sujetos ADD COLUMN dimen int2 default 1;
+ALTER TABLE sujetos ADD COLUMN isactivo bool DEFAULT 't';
+
+
+CREATE TABLE autprecio
+(
+   idautprecio serial, 
+   idsujeto int4 NOT NULL, 
+   tipo int2 DEFAULT 0, 
+   CONSTRAINT pk_autprecio PRIMARY KEY (idautprecio), 
+   CONSTRAINT fk_sujetos FOREIGN KEY (idsujeto) REFERENCES sujetos (idsujeto)    ON UPDATE CASCADE ON DELETE RESTRICT
+) WITHOUT OIDS;
+
+
+
+
+ALTER TABLE imagenrep ADD COLUMN impresora varchar(150);
+
+
+ALTER TABLE items ADD COLUMN iname2 character varying(140);
+
++++++++++++++++++++++++++++++++++++++++++++
+
+ALTER TABLE saldosb ADD COLUMN salestcta double precision;
+
++++++++++++++++++++++++++++++++++++++++++++
+ALTER TABLE aneiva ADD COLUMN fimpresion date;
+
+ALTER TABLE plancuenta ADD COLUMN auxite integer DEFAULT 0;
+ALTER TABLE plancuenta ADD COLUMN auxsuj integer DEFAULT 0;
+ALTER TABLE plancuenta ADD COLUMN nomcuenta character varying(220);
+
+CREATE OR REPLACE FUNCTION nomcuenta(integer)
+  RETURNS character varying AS
+'SELECT cuenta from vplancta where idplancuenta=$1 ;'
+  LANGUAGE 'sql' IMMUTABLE
+  COST 100;
+ALTER FUNCTION nomcuenta(integer) OWNER TO postgres;
+
+update plancuenta set nomcuenta=nomcuenta(idplancuenta);
+
+
+**************************************************************************
+**************************************************************************
+
+INSERT INTO grudat (idgrupo, descripgru, gtag, tipo, gtable) VALUES (300, 'TIPO DE SUJETO EXTRANJERO', 'TSEX', 'G', 'TSUJEXT');
+
+INSERT INTO detagru (idgrupo, descripda, valorda) VALUES (300, 'PERSONA NATURAL', '01');
+INSERT INTO detagru (idgrupo, descripda, valorda) VALUES (300, 'SOCIEDAD', '02');
+
+ALTER TABLE sujetos ADD COLUMN tipdocextraj integer default 13064 ; (persona natural)
+
+INSERT INTO detagru (idgrupo, descripda, valorda) VALUES (201, 'FORMA DE PAGO DOCUMENTOS', '');
+
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (1, 'SIN UTILIZACION DEL SISTEMA FINANCIERO', 0, 0, 13066, 1);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (2, 'CHEQUE PROPIO', 0, 0, 13066, 2);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (3, 'CHEQUE CERTIFICADO', 0, 0, 13066, 3);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (4, 'CHEQUE DE GERENCIA', 0, 0, 13066, 4);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (5, 'CHEQUE DEL EXTERIOR', 0, 0, 13066, 5);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (6, 'DEBITO DE CUENTA', 0, 0, 13066, 6);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (7, 'TRANSFERENCIA PROPIO BANCO', 0, 0, 13066, 7);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (8, 'TRANSFERENCIA OTRO BANCO NACIONAL', 0, 0, 13066, 8);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (9, 'TRANSFERENCIA  BANCO EXTERIOR', 0, 0, 13066, 9);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (10, 'TARJETA DE CREDITO NACIONAL', 0, 0, 13066, 10);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (11, 'TARJETA DE CREDITO INTERNACIONAL', 0, 0, 13066, 11);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (12, 'GIRO', 0, 0, 13066, 12);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (13, 'DEPOSITO EN CUENTA (CORRIENTE/AHORROS)', 0, 0, 13066, 13);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (14, 'ENDOSO DE INVERSION', 0, 0, 13066, 14);
+
+***********
+
+Cambios de 
+SELECT DISTINCT d.idugra, d.fecgra, d.code, d.succode, d.depcode, d.usercaja, d.userstore, d.num, d.idsecudoc, d.cliente, d.fecha, d.pdocode, d.ffrom, d.fto, d.seller, d.casher, d.linkdoc, d.sujter, d.auxitem, d.duracion, d.taza, d.valcuota, d.numcuota, d.numcajas, d.poriva, d.descuconiva, d.descusiniva, d.recargo, d.recargo2, d.recargo3, d.flete, d.subconiva, z.tipitem, d.chofer, f.sname AS chname, f.scedula AS chcedula, f.sruc AS chruc, d.nrec, d.comenanu, d.subsiniva, d.subtotal, d.ivavalor, d.ivabienes, d.icevalor, d.ipsvalor, d.montototal, d.saldo, d.tmpsaldo, d.isguia, d.isupdate, d.islock, d.isprint, d.isaccount, d.isbodega, d.ispagado, d.isanulado, d.isautorizado, d.isreversado, d.concepto, k.afecha AS feccon, b.descripda AS bodega, z.tipsaldo, z.iddocu, z.nomdoc, z.iscero, z.dtag, z.swaneiva, z.tipnum, z.swkar, z.swconta, z.idsritabla, z.ajucon, d.serie, d.numauto, d.fcaducidad, s.scel, s.stelf, s.saddr, s.saddr2, s.scode, s.ssri, s.sname, s.sruc, s.scedula, ci.descripda AS sciudad, s.spasaporte, j.sname AS vendedor, u.sname AS nombreu, u.observ, monedas.moname AS moneda, d.pflag, d.dflag, d.idws, q.reporte, q.proceso, q.impresora, t.scode AS codter, t.sname AS nombret, z.isdevo, z.istransfer, z.documentos, 0 AS codprin, 0 AS codgar, ''::text AS principal, ''::text AS garante, r.sname AS recaudador, 0 AS idprin, 0 AS idgar, c2.descripda AS ciudad2, s.diasplz, a.sname AS cajero, i.descripda AS parroquia, e.descripda AS sector, v.descripda AS provincia, s.calific, s.sforpag, z.cretri, 
+     x.descripda AS tipdocextraj, s.issocio
+   FROM documents d
+   LEFT JOIN detagru b ON d.userstore = b.iddato
+   LEFT JOIN asientosdia k ON d.code = k.code
+   LEFT JOIN vsecudoc z ON d.idsecudoc = z.idsecudoc
+   LEFT JOIN imagenrep q ON z.idimage = q.idimage
+   LEFT JOIN sujetos u ON d.idugra = u.idsujeto
+   LEFT JOIN periodos o ON d.pdocode = o.pdocode
+   LEFT JOIN monedas ON o.moneda = monedas.mocode
+   LEFT JOIN sujetos s ON d.cliente = s.idsujeto
+   LEFT JOIN sujetos j ON d.seller = j.idsujeto
+   LEFT JOIN sujetos r ON d.casher = r.idsujeto
+   LEFT JOIN detagru ci ON s.sciudad = ci.iddato
+   LEFT JOIN detagru c2 ON s.sciudad2 = c2.iddato
+   LEFT JOIN detagru i ON s.parroquia = i.iddato
+   LEFT JOIN detagru e ON s.sector = e.iddato
+   LEFT JOIN detagru v ON s.sprov = v.iddato
+   LEFT JOIN sujetos a ON d.usercaja = a.idsujeto
+   LEFT JOIN sujetos t ON d.sujter = t.idsujeto
+   LEFT JOIN sujetos f ON d.chofer = f.idsujeto
+   LEFT JOIN detagru x on s.tipdocextraj = x.iddato;
+
+
+alter table aneiva add fptipori integer default 1;
+alter table aneiva add fppaispag integer default 0;
+alter table aneiva add fpcondbtri integer default 0;
+alter table aneiva add fpretnolega integer default 0 ;
+alter table aneiva add forpag1 integer ;
+alter table aneiva add forpag2 integer ;
+alter table aneiva add forpag3 integer ;     
+
+
+CREATE TABLE tmpaneiva (
+  code bigint NOT NULL,
+  femision1 date,
+  fecha1 date,
+  numserie1 integer DEFAULT 0,
+  numsecue1 integer DEFAULT 0,
+  numauto1 character varying(40),
+  fcaducidad1 date,
+  fecha2 date,
+  numserie2 integer DEFAULT 0,
+  numsecue2 integer DEFAULT 0,
+  numauto2 character varying(40),
+  fcaducidad2 date,
+  fecharet date,
+  montoret double precision,
+  serieret integer,
+  autoret character varying(40),
+  secueret integer,
+  fcaducret date,
+  idtipdoc integer DEFAULT 0,
+  idprov integer,
+  autimp integer,
+  drawback character(1) DEFAULT 'N'::bpchar,
+  credtrib smallint,
+  numserie3 integer,
+  fcaducidad3 date,
+  numauto3 character varying(40),
+  idncnd integer,
+  idsecudoc integer,
+  idsectra integer DEFAULT 0,
+  fduifue date,
+  numcomimp character varying(7),
+  numrefrendo character varying(16),
+  monfobcif double precision,
+  idbanco integer,
+  conint character(1),
+  tltx integer,
+  porice integer,
+  tipdocexp integer,
+  fue character varying(10),
+  idws integer,
+  codigoret character varying(5),
+  porcenret integer, 
+  femiauto date,
+  fimpresion date,
+  fptipori integer,
+  fppaispag integer,
+  fpcondbtri integer,
+  fpretnolega integer,
+  forpag1 integer,
+  forpag2 integer,
+  forpag3 integer     
+)
+WITH (
+  OIDS=FALSE
+);
+
+
+
+insert into tmpaneiva select * from aneiva ;     
+
+drop view vaneuret;
+drop view vdocumentg;
+drop view vdocuret;
+drop table aneiva;
+
+select * into table aneiva from tmpaneiva;
+
+alter table aneiva add CONSTRAINT pk_aneiva PRIMARY KEY (code);
+alter table aneiva add CONSTRAINT code FOREIGN KEY (code)
+      REFERENCES documents (code) MATCH SIMPLE
+      ON UPDATE CASCADE ON DELETE RESTRICT ;
+
+CREATE UNIQUE INDEX aneivaunico
+  ON aneiva
+  USING btree
+  (code);
+
+
+CREATE TABLE aneivarg(  code integer NOT NULL,  tipocomp integer,  idproveedor integer,  serie integer,  secuencia integer,  autoriza character varying(40) DEFAULT 0,  fecemi date,  base0 double precision,  base12 double precision,  montoiva double precision,  CONSTRAINT pk_code PRIMARY KEY (code ))WITH (  OIDS=FALSE);ALTER TABLE aneivarg  OWNER TO postgres;
+
+alter table empresas add contador character varying (100);
+alter table empresas add numestb integer default 0 ;
+
+
+motivo de anulacion
+anulacion en caja
+
+ALTER TABLE documents ADD COLUMN comenanu character varying(200);
+***************************************************************************************
+
+ALTER TABLE periodos ADD COLUMN mincodite integer DEFAULT 0;
+ALTER TABLE periodos ADD COLUMN mincodsuj integer DEFAULT 0;
+
+
+iif(isnull(dirdoc) or empty(dirdoc),alltrim(saddr), dirdoc)
+
+cambios de fecha de documento
+
+select a.code, nomdoc, a.fecha, d.fecha, d.subtotal
+from actdoc a left join vsecudoc v on (a.idsecudoc=v.idsecudoc)
+	      left join documents d on (a.code=d.code)
+where substr(nomdoc,1,3)='FAC' and a.fecha<>d.fecha and a.fecha>='2015-04-01'
+	and a.fecha<='2015-04-30' and a.fecgra>'2015-05-20'
+	
+codigo 159739	
+	
+select a.code, nomdoc, a.fecha, d.fecha, d.subtotal
+from actdoc a left join vsecudoc v on (a.idsecudoc=v.idsecudoc)
+	      left join documents d on (a.code=d.code)
+where substr(nomdoc,1,3)='FAC' and a.fecha<>d.fecha and (a.fecha<'2015-04-01'
+	or a.fecha>'2015-04-30') and (d.fecha>='2015-04-01' and d.fecha<='2015-04-30') and a.fecgra>'2015-05-20'	
+	
+codigo 154290	
+	
+	
+	sebastian palermo ----autoconforntacion
+	
+	
+ALTER TABLE sujetos ADD COLUMN isccerrado boolean DEFAULT 'f';
+
+ALTER TABLE usuarios ADD COLUMN esptovta boolean DEFAULT 'f';
+**********************
+
+update sritabla set descrip=rtrim(descrip,' ')||' hasta 31-Ago-2016' 
+where  valor<>1 and iddato=13211;
+
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (15, 'COMPENSACIÓN DE DEUDAS', 0, 0, 13211, 15);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (16, 'TARJETA DE DÉBITO', 0, 0, 13211, 16);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (17, 'DINERO ELECTRÓNICO', 0, 0, 13211, 17);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (18, 'TARJETA PREPAGO', 0, 0, 13211, 18);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (19, 'TARJETA DE CRÉDITO', 0, 0, 13211, 19);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (20, 'OTROS CON UTILIZACION DEL SISTEMA FINANCIERO', 0, 0, 13211, 20);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (21, 'ENDOSO DE TÍTULOS', 0, 0, 13211, 21);
+
+ALTER TABLE sujetos
+  ADD COLUMN sforpag integer DEFAULT 0;
+
+CREATE TABLE estbcmntos
+(
+   idestbcmnto serial, 
+   estb smallint DEFAULT 0, 
+   descrip character varying(120)
+) 
+WITH (
+  OIDS = FALSE
+)
+;
+
+
+update sritabla set descrip=rtrim(descrip,' ')||' hasta 31-Ago-2016' 
+where  valor<>1 and iddato=13211;
+
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (15, 'COMPENSACIÓN DE DEUDAS', 0, 0, 13211, 15);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (16, 'TARJETA DE DÉBITO', 0, 0, 13211, 16);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (17, 'DINERO ELECTRÓNICO', 0, 0, 13211, 17);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (18, 'TARJETA PREPAGO', 0, 0, 13211, 18);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (19, 'TARJETA DE CRÉDITO', 0, 0, 13211, 19);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (20, 'OTROS CON UTILIZACION DEL SISTEMA FINANCIERO', 0, 0, 13211, 20);
+INSERT INTO sritabla (codigo, descrip, anio, mes, iddato, valor) VALUES (21, 'ENDOSO DE TÍTULOS', 0, 0, 13211, 21);
+
+ALTER TABLE sujetos
+  ADD COLUMN sforpag integer DEFAULT 0;
+
+CREATE TABLE estbcmntos
+(
+   idestbcmnto serial, 
+   estb smallint DEFAULT 0, 
+   descrip character varying(120)
+) 
+WITH (
+  OIDS = FALSE
+)
+;

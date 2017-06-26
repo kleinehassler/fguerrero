@@ -1,0 +1,662 @@
+.
+Error en la línea 723: La instrucción no está en un procedimiento.
+ýùûþU
+Error en la línea 724: No se reconoce el verbo de comando.
+Ù
+Error en la línea 726: No se reconoce el verbo de comando.
+þO
+Error en la línea 736: No se reconoce el verbo de comando.
+þ
+Error en la línea 758: No se reconoce el verbo de comando.
+þ
+Error en la línea 759: No se reconoce el verbo de comando.
+\Ù
+Error en la línea 762: La instrucción no está en un procedimiento.
+þ.
+Error en la línea 768: No se reconoce el verbo de comando.
+þ:
+Error en la línea 769: No se reconoce el verbo de comando.
+þ
+Error en la línea 770: No se reconoce el verbo de comando.
+þ
+Error en la línea 771: No se reconoce el verbo de comando.
+þ
+Error en la línea 773: No se reconoce el verbo de comando.
+þ
+Error en la línea 774: No se reconoce el verbo de comando.
+þ
+Error en la línea 775: No se reconoce el verbo de comando.
+þ
+Error en la línea 776: No se reconoce el verbo de comando.
+þ
+Error en la línea 777: No se reconoce el verbo de comando.
+þB
+Error en la línea 778: No se reconoce el verbo de comando.
+þ
+Error en la línea 786: No se reconoce el verbo de comando.
+\Ù
+Error en la línea 791: La instrucción no está en un procedimiento.
+7
+Error en la línea 796: La instrucción no está en un procedimiento.
+ýùÕ
+Error en la línea 826: No se reconoce el verbo de comando.
+ý÷
+Error en la línea 827: No se reconoce el verbo de comando.
+ý÷
+Error en la línea 831: No se reconoce el verbo de comando.
+ý÷&
+Error en la línea 832: No se reconoce el verbo de comando.
+ý÷8
+Error en la línea 833: No se reconoce el verbo de comando.
+ý÷?
+Error en la línea 834: No se reconoce el verbo de comando.
+ý÷
+Error en la línea 835: No se reconoce el verbo de comando.
+ColumnCount = 4
+Error en la línea 852: La instrucción no está en un procedimiento.
+ColumnWidths = "260,50,50,0"
+Error en la línea 853: La instrucción no está en un procedimiento.
+RowSourceType = 6
+Error en la línea 854: La instrucción no está en un procedimiento.
+RowSource = "perinf.descrip,anio,mes,idsritabla"
+Error en la línea 855: La instrucción no está en un procedimiento.
+Enabled = .T.
+Error en la línea 856: La instrucción no está en un procedimiento.
+FirstElement = 1
+Error en la línea 857: La instrucción no está en un procedimiento.
+Height = 24
+Error en la línea 858: La instrucción no está en un procedimiento.
+Left = 85
+Error en la línea 859: La instrucción no está en un procedimiento.
+NumberOfElements = 0
+Error en la línea 860: La instrucción no está en un procedimiento.
+Style = 2
+Error en la línea 861: La instrucción no está en un procedimiento.
+TabIndex = 21
+Error en la línea 862: La instrucción no está en un procedimiento.
+Top = 8
+Error en la línea 863: La instrucción no está en un procedimiento.
+Width = 391
+Error en la línea 864: La instrucción no está en un procedimiento.
+ZOrderSet = 6
+Error en la línea 865: La instrucción no está en un procedimiento.
+DisabledBackColor = 255,255,255
+Error en la línea 866: Error de sintaxis.
+DisabledForeColor = 15,0,15
+Error en la línea 867: Error de sintaxis.
+Name = "Combo1"
+Error en la línea 868: La instrucción no está en un procedimiento.
+local smes, saño
+Error en la línea 870: La instrucción no está en un procedimiento.
+smes=perinf.mes
+Error en la línea 871: La instrucción no está en un procedimiento.
+saño=perinf.anio
+Error en la línea 872: La instrucción no está en un procedimiento.
+thisform.fsini=date(saño,smes,1)
+Error en la línea 873: La instrucción no está en un procedimiento.
+thisform.fsfin=date(saño,smes,diasmes(smes,saño))
+Error en la línea 874: La instrucción no está en un procedimiento.
+ENDPROC
+Error en la línea 876: Error de anidamiento.
+FontBold = .T.
+Error en la línea 878: La instrucción no está en un procedimiento.
+FontName = "Times New Roman"
+Error en la línea 879: La instrucción no está en un procedimiento.
+FontSize = 10
+Error en la línea 880: La instrucción no está en un procedimiento.
+BackStyle = 0
+Error en la línea 881: La instrucción no está en un procedimiento.
+Caption = "PERIODO"
+Error en la línea 882: La instrucción no está en un procedimiento.
+Height = 18
+Error en la línea 883: La instrucción no está en un procedimiento.
+Left = 14
+Error en la línea 884: La instrucción no está en un procedimiento.
+Top = 13
+Error en la línea 885: La instrucción no está en un procedimiento.
+Width = 59
+Error en la línea 886: La instrucción no está en un procedimiento.
+TabIndex = 55
+Error en la línea 887: La instrucción no está en un procedimiento.
+Name = "Label3"
+Error en la línea 888: La instrucción no está en un procedimiento.
+commandbutton
+Error en la línea 890: No se reconoce el verbo de comando.
+commandbutton
+Error en la línea 891: No se reconoce el verbo de comando.
+Left = 117
+Error en la línea 892: La instrucción no está en un procedimiento.
+Height = 27
+Error en la línea 893: La instrucción no está en un procedimiento.
+Width = 84
+Error en la línea 894: La instrucción no está en un procedimiento.
+Caption = "DESTINO"
+Error en la línea 895: La instrucción no está en un procedimiento.
+Name = "Command1"
+Error en la línea 896: La instrucción no está en un procedimiento.
+thisform.destino=getdir('c:',empresa)
+Error en la línea 898: La instrucción no está en un procedimiento.
+ENDPROC
+Error en la línea 899: Error de anidamiento.
+commandbutton
+Error en la línea 901: No se reconoce el verbo de comando.
+commandbutton
+Error en la línea 902: No se reconoce el verbo de comando.
+Left = 203
+Error en la línea 903: La instrucción no está en un procedimiento.
+Height = 27
+Error en la línea 904: La instrucción no está en un procedimiento.
+Width = 84
+Error en la línea 905: La instrucción no está en un procedimiento.
+Caption = "INICIAR"
+Error en la línea 906: La instrucción no está en un procedimiento.
+Name = "Command2"
+Error en la línea 907: La instrucción no está en un procedimiento.
+local p, db, archivo, cp
+Error en la línea 909: La instrucción no está en un procedimiento.
+p=nconcero(6,perinf.mes*10000+perinf.anio)
+Error en la línea 910: La instrucción no está en un procedimiento.
+if empty(thisform.destino) then
+Error en la línea 914: La instrucción no está en un procedimiento.
+wait 'Seleccione la carpeta en donde desea descargar los archivos' wind nowait
+Error en la línea 915: La instrucción no está en un procedimiento.
+return
+Error en la línea 916: La instrucción no está en un procedimiento.
+endif
+Error en la línea 917: La instrucción no está en un procedimiento.
+if empty(thisform.fsini) or empty(thisform.fsfin) then
+Error en la línea 919: La instrucción no está en un procedimiento.
+wait 'Seleccione el periodo' wind nowait
+Error en la línea 920: La instrucción no está en un procedimiento.
+return
+Error en la línea 921: La instrucción no está en un procedimiento.
+endif
+Error en la línea 922: La instrucción no está en un procedimiento.
+wait 'Generando Información, espere un momento....' wind nowait
+Error en la línea 924: La instrucción no está en un procedimiento.
+q1="select distinct sruc, ssri, stelf, sfax, smail::char(60), saddr, siderepleg, srepleg, sruccontador from empresas ;"
+Error en la línea 939: La instrucción no está en un procedimiento.
+if !sqli(q1,'rucempre') then
+Error en la línea 941: La instrucción no está en un procedimiento.
+return
+Error en la línea 942: La instrucción no está en un procedimiento.
+endif
+Error en la línea 943: La instrucción no está en un procedimiento.
+cp=perinf.codigo
+Error en la línea 944: La instrucción no está en un procedimiento.
+select 	substr(sruc,1,13) as sruc,  nconcero(3,cp) as periodo,  substr(ssri,1,60) as ssri,  nconcero(9,stelf) as stelf,  nconcero(9,sfax) as sfax,  substr(smail,1,60) as smail,  substr(saddr,1,60) as saddr,  substr(siderepleg,1,1) as siderepleg,  substr(srepleg,1,13) as srepleg,  substr(sruccontador,1,13) as sruccontador  from rucempre into cursor empresas
+Error en la línea 955: La instrucción no está en un procedimiento.
+q1="select distinct d.code, "+ "to_char((r.codigo::int2)::int4,'FM09') as codSustento, "+ "a.drawback, "+ "to_char((c.codigo::int2)::int4,'FM09') as tipocomprobante, "+ "case when char_length(trim(both sruc))=13 then '01' when char_length(TRIM(both scedula))=10 then '02'  else '03' end AS tipidprov, "+ "case when char_length(trim(both sruc))=13 then sruc when char_length(TRIM(both scedula))=10 then scedula  else spasaporte end AS idprov, "+ "a.fecharet AS fechaRegistro, "+ "substring(to_char(a.numserie2,'FM0009999') from char_length(to_char(a.numserie2,'FM0009999'))-5 for char_length(to_char(a.numserie2,'FM0009999'))-4 ) as establecimiento, "+ "substring(to_char(a.numserie2,'FM0009999') from char_length(to_char(a.numserie2,'FM0009999'))-2 for (char_length(to_char(a.numserie2,'FM0009999')))) as puntoemision, "+ "to_char(a.numsecue2,'FM0000009') as secuencial, "+ "a.fecha2 AS fechaemison, "+ "to_char(a.numauto2,'FM0000000099') as autorizacion, "+ "a.fcaducidad2 AS fechacaducidad, "+ "d.subsiniva AS baseImponible, "+ "d.subconiva AS baseImpGrav, "+ "CASE WHEN d.ivavalor>0 THEN 2 ELSE 0 END AS porcentajeiva, "+ "d.ivavalor AS montoIVA, "+ "CASE WHEN d.icevalor>0 Then d.icevalor ELSE 0 END as BaseimpICE, "+ "CASE WHEN a.porice>0 THEN a.porice  ELSE 0 END as porcentajeICE, "+ "d.icevalor as MontoICE, "+ "0 as montoivabienes, "+ "0 as porretbienes,  "+ "0 as valorretbienes, "+ "0 as montoivaservicios, "+ "0 as porretservicios, "+ "0 as valorretservicios, "+ "a.codigoret as codretair, "+ "d.subtotal as baseimpair, "+ "a.porcenret as porcentajeair, "+ "a.montoret as valretair, "+ "substring(to_char(a.serieret,'FM0009999') from char_length(to_char(a.serieret,'FM0009999'))-5 for char_length(to_char(a.serieret,'FM0009999'))-4 ) as estabretencion1, "+ "substring(to_char(a.serieret,'FM0009999') from char_length(to_char(a.serieret,'FM0009999'))-2 for (char_length(to_char(a.serieret,'FM0009999')))) as ptoEmiretencion1, "+ "to_char(a.secueret,'FM0000009') as secretencion1, "+ "to_char(a.autoret,'FM0000000099') as autretencion1, "+ "a.fecharet AS fechaemiret1, "+ "0 as docmodificado, "+ "000 as estabmodificado, "+ "000 as ptoemimodificado, "+ "0000000 as secmodificado, "+ "0000000000 as autmodificado, "+ "0.00 as montotitulooneroso, "+ "0.00 as montotitulogratuito "+ "from vdocuments d left join aneiva a on (d.code=a.code) "+ "left join sritabla c on (a.idtipdoc=c.idsritabla) "+ "left join sritabla r on (a.credtrib=r.idsritabla) "+ " where d.isaccount and not d.isanulado and a.tltx=1 and d.swaneiva and d.fecha >="+alup(thisform.fsini)+ " and d.fecha <="+alup(thisform.fsfin)+" and d.iddocu in "+ "(select distinct d.iddocu from gdoc g, dgdoc t, docuse d "+ " where g.tag='ANXCOM' and g.idgdoc=t.idgdoc and t.dtag=d.dtag and "+ " d.pdocode="+alup(iprd)+");"
+Error en la línea 1012: La instrucción no está en un procedimiento.
+if !sqli(q1,'dprinc') then
+Error en la línea 1019: La instrucción no está en un procedimiento.
+return
+Error en la línea 1020: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1021: La instrucción no está en un procedimiento.
+q1="select distinct  d.code::int4, b.valor, b.basecal, r.valcal, r.rubtab "+ "from vdocuments d left join cobros b on (d.code=b.code) "+ "left join rubros r on (b.rubcode=r.rubcode) "+ "where d.isaccount and not d.isanulado AND b.isdocret and d.fecha>="+alup(thisform.fsini)+ " and d.fecha<="+alup(thisform.fsfin)+" and d.iddocu in "+ "(select distinct d.iddocu from gdoc g, dgdoc t, docuse d "+ " where g.tag='ANXCOM' and g.idgdoc=t.idgdoc and t.dtag=d.dtag "+ " and d.pdocode="+alup(iprd)+") order by d.code;"
+Error en la línea 1033: La instrucción no está en un procedimiento.
+if !sqli(q1,'dcob') then
+Error en la línea 1035: La instrucción no está en un procedimiento.
+return
+Error en la línea 1036: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1037: La instrucción no está en un procedimiento.
+sele dcob
+Error en la línea 1049: La instrucción no está en un procedimiento.
+go top
+Error en la línea 1050: La instrucción no está en un procedimiento.
+do while !eof()
+Error en la línea 1051: La instrucción no está en un procedimiento.
+sele retenciones
+Error en la línea 1052: La instrucción no está en un procedimiento.
+if retenciones.code#dcob.code then 
+Error en la línea 1053: La instrucción no está en un procedimiento.
+appen blank
+Error en la línea 1054: La instrucción no está en un procedimiento.
+replace code with dcob.code
+Error en la línea 1055: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1056: La instrucción no está en un procedimiento.
+if dcob.rubtab='851' or dcob.rubtab='857' or dcob.rubtab='859' or dcob.rubtab='861' or  dcob.rubtab='863' or dcob.rubtab='865' then
+Error en la línea 1059: La instrucción no está en un procedimiento.
+campo1='c'+alltrim(dcob.rubtab)
+Error en la línea 1060: La instrucción no está en un procedimiento.
+campo2='b'+alltrim(dcob.rubtab)
+Error en la línea 1061: La instrucción no está en un procedimiento.
+campo3='v'+alltrim(dcob.rubtab)
+Error en la línea 1062: La instrucción no está en un procedimiento.
+replace &campo1 with dcob.valor
+Error en la línea 1063: La instrucción no está en un procedimiento.
+replace &campo2 with dcob.basecal
+Error en la línea 1064: La instrucción no está en un procedimiento.
+replace &campo3 with dcob.valcal
+Error en la línea 1065: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1066: La instrucción no está en un procedimiento.
+sele dcob
+Error en la línea 1068: La instrucción no está en un procedimiento.
+skip
+Error en la línea 1069: La instrucción no está en un procedimiento.
+enddo
+Error en la línea 1070: La instrucción no está en un procedimiento.
+sele a.*, r.c851 as ret30, r.c857 as ret70, r.c859+r.c861+r.c863+r.c865 as ret100,  r.b851 as bas30, r.b857 as bas70, r.b859+r.b861+r.b863+r.b865 as bas100   from dprinc a left join retenciones r on ( a.code=r.code)  order by a.code into cursor anexosi
+Error en la línea 1078: La instrucción no está en un procedimiento.
+sele anexosi
+Error en la línea 1083: La instrucción no está en un procedimiento.
+go top
+Error en la línea 1084: La instrucción no está en un procedimiento.
+do while !eof()
+Error en la línea 1085: La instrucción no está en un procedimiento.
+sele tlc
+Error en la línea 1086: La instrucción no está en un procedimiento.
+appen blank
+Error en la línea 1087: La instrucción no está en un procedimiento.
+sele anexosi
+Error en la línea 1088: La instrucción no está en un procedimiento.
+replace tlc.code						with anexosi.code
+Error en la línea 1089: La instrucción no está en un procedimiento.
+replace tlc.drawback					with 'N'
+Error en la línea 1090: La instrucción no está en un procedimiento.
+replace tlc.tipidprov					with nconcero(2,anexosi.tipidprov)
+Error en la línea 1091: La instrucción no está en un procedimiento.
+do case
+Error en la línea 1092: La instrucción no está en un procedimiento.
+case tipidprov='01' or tipidprov='04'
+Error en la línea 1093: La instrucción no está en un procedimiento.
+replace tlc.idprov					with anexosi.idprov
+Error en la línea 1094: La instrucción no está en un procedimiento.
+case sectra='02' or sectra='05'
+Error en la línea 1095: La instrucción no está en un procedimiento.
+replace tlc.idprov					with anexosi.idprov 
+Error en la línea 1096: La instrucción no está en un procedimiento.
+case sectra='03' or sectra='06'
+Error en la línea 1097: La instrucción no está en un procedimiento.
+replace tlc.idprov					with anexosi.idprov 
+Error en la línea 1098: La instrucción no está en un procedimiento.
+case sectra='07'
+Error en la línea 1099: La instrucción no está en un procedimiento.
+replace tlc.idprov					with '9999999999999'
+Error en la línea 1100: La instrucción no está en un procedimiento.
+other 
+Error en la línea 1101: La instrucción no está en un procedimiento.
+replace tlc.idprov					with '0000000000001'
+Error en la línea 1102: La instrucción no está en un procedimiento.
+endcase
+Error en la línea 1103: La instrucción no está en un procedimiento.
+replace tlc.tipocomprobante				with nconcero(2,tipocomprobante)
+Error en la línea 1105: La instrucción no está en un procedimiento.
+replace tlc.fechaemision 				with anexosi.fechaemision
+Error en la línea 1106: La instrucción no está en un procedimiento.
+replace tlc.fechaRegistro				with anexosi.fechaRegistro
+Error en la línea 1107: La instrucción no está en un procedimiento.
+replace tlc.establecimiento 			with anexosi.establecimiento
+Error en la línea 1108: La instrucción no está en un procedimiento.
+replace tlc.puntoEmision				with anexosi.PuntoEmision
+Error en la línea 1109: La instrucción no está en un procedimiento.
+replace tlc.secuencial	 				with anexosi.secuencial
+Error en la línea 1110: La instrucción no está en un procedimiento.
+replace tlc.Autorizacion	 			with anexosi.Autorizacion
+Error en la línea 1111: La instrucción no está en un procedimiento.
+replace tlc.fechacaducidad	 			with Substr(DTOC(anexosi.fechaCaducidad),4,7)
+Error en la línea 1112: La instrucción no está en un procedimiento.
+replace tlc.codSustento					with iif(IsNull(anexosi.codSustento),'01', anexosi.codSustento)
+Error en la línea 1113: La instrucción no está en un procedimiento.
+replace tlc.BaseImponible				with anexosi.BaseImponible
+Error en la línea 1114: La instrucción no está en un procedimiento.
+replace tlc.BaseImpGrav					with anexosi.BaseImpGrav
+Error en la línea 1115: La instrucción no está en un procedimiento.
+replace tlc.PorcentajeIva	 			with anexosi.PorcentajeIva
+Error en la línea 1116: La instrucción no está en un procedimiento.
+replace tlc.MontoIVA 					with anexosi.MontoIVA
+Error en la línea 1117: La instrucción no está en un procedimiento.
+replace tlc.BaseimpICE 					with 0.00
+Error en la línea 1118: La instrucción no está en un procedimiento.
+replace tlc.porcentajeIce				with 0
+Error en la línea 1119: La instrucción no está en un procedimiento.
+replace tlc.montoIce					with 0.00
+Error en la línea 1120: La instrucción no está en un procedimiento.
+replace tlc.MontoIvaBienes				with  0
+Error en la línea 1123: La instrucción no está en un procedimiento.
+replace tlc.porRetBienes				with  0
+Error en la línea 1124: La instrucción no está en un procedimiento.
+replace tlc.ValorRetBienes				with  0
+Error en la línea 1125: La instrucción no está en un procedimiento.
+if ret30>0 then
+Error en la línea 1127: La instrucción no está en un procedimiento.
+replace tlc.MontoIvaBienes			with anexosi.bas30
+Error en la línea 1128: La instrucción no está en un procedimiento.
+replace tlc.porRetBienes			with 1
+Error en la línea 1129: La instrucción no está en un procedimiento.
+replace tlc.ValorRetBienes			with anexosi.ret30
+Error en la línea 1130: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1131: La instrucción no está en un procedimiento.
+if ret100>0 then
+Error en la línea 1133: La instrucción no está en un procedimiento.
+replace tlc.MontoIvaBienes 			with anexosi.bas100
+Error en la línea 1134: La instrucción no está en un procedimiento.
+replace tlc.porRetBienes			with 3
+Error en la línea 1135: La instrucción no está en un procedimiento.
+replace tlc.ValorRetBienes			with anexosi.ret100
+Error en la línea 1136: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1137: La instrucción no está en un procedimiento.
+if ret70>0 then
+Error en la línea 1139: La instrucción no está en un procedimiento.
+replace tlc.MontoIvaServicios 		with anexosi.bas70
+Error en la línea 1140: La instrucción no está en un procedimiento.
+replace tlc.porRetServicios			with 2
+Error en la línea 1141: La instrucción no está en un procedimiento.
+replace tlc.ValorRetServicios		with anexosi.ret70
+Error en la línea 1142: La instrucción no está en un procedimiento.
+else
+Error en la línea 1143: La instrucción no está en un procedimiento.
+replace tlc.MontoIvaServicios 		with  0
+Error en la línea 1144: La instrucción no está en un procedimiento.
+replace tlc.porRetServicios			with  0
+Error en la línea 1145: La instrucción no está en un procedimiento.
+replace tlc.ValorRetServicios		with  0
+Error en la línea 1146: La instrucción no está en un procedimiento.
+endif			
+Error en la línea 1147: La instrucción no está en un procedimiento.
+Select AIRC
+Error en la línea 1150: La instrucción no está en un procedimiento.
+Append Blank 
+Error en la línea 1151: La instrucción no está en un procedimiento.
+replace tlc.codRetAir					with Alltrim(anexosi.codRetAir)
+Error en la línea 1152: La instrucción no está en un procedimiento.
+replace tlc.BaseImpAir					with anexosi.BaseImpAir
+Error en la línea 1153: La instrucción no está en un procedimiento.
+replace tlc.PorcentajeAir				with anexosi.PorcentajeAir
+Error en la línea 1154: La instrucción no está en un procedimiento.
+replace tlc.ValRetAir					with anexosi.ValRetAir
+Error en la línea 1155: La instrucción no está en un procedimiento.
+Select tlc
+Error en la línea 1157: La instrucción no está en un procedimiento.
+replace tlc.estabRetencion1				with anexosi.estabRetencion1
+Error en la línea 1159: La instrucción no está en un procedimiento.
+replace tlc.ptoEmiRetencion1			with anexosi.ptoEmiRetencion1
+Error en la línea 1160: La instrucción no está en un procedimiento.
+replace tlc.secRetencion1				with anexosi.secRetencion1
+Error en la línea 1161: La instrucción no está en un procedimiento.
+replace tlc.autRetencion1				with anexosi.autRetencion1
+Error en la línea 1162: La instrucción no está en un procedimiento.
+replace tlc.fechaEmiRet1				with anexosi.fechaEmiRet1
+Error en la línea 1163: La instrucción no está en un procedimiento.
+replace tlc.docModificado				with 0 					
+Error en la línea 1164: La instrucción no está en un procedimiento.
+replace tlc.fechaEmiModificado			with ctod('00/00/0000') 
+Error en la línea 1165: La instrucción no está en un procedimiento.
+replace tlc.estabModificado				with '000'  			
+Error en la línea 1166: La instrucción no está en un procedimiento.
+replace tlc.ptoEmiModificado			with '000'  			
+Error en la línea 1167: La instrucción no está en un procedimiento.
+replace tlc.secModificado				with '0000000'  		
+Error en la línea 1168: La instrucción no está en un procedimiento.
+replace tlc.autModificado				with '0000000000' 		
+Error en la línea 1169: La instrucción no está en un procedimiento.
+replace tlc.contratoPartidoPolitico		with space(10)	
+Error en la línea 1170: La instrucción no está en un procedimiento.
+replace tlc.montoTituloOneroso			with 0.00		
+Error en la línea 1171: La instrucción no está en un procedimiento.
+replace tlc.MontoTituloGratuito			with 0.00		
+Error en la línea 1172: La instrucción no está en un procedimiento.
+sele anexosi
+Error en la línea 1174: La instrucción no está en un procedimiento.
+skip
+Error en la línea 1175: La instrucción no está en un procedimiento.
+enddo
+Error en la línea 1177: La instrucción no está en un procedimiento.
+sele tlc
+Error en la línea 1178: La instrucción no está en un procedimiento.
+q1="select distinct "+ "d.code, "+ "d.cliente, "+ "case when char_length(trim(both sruc))=13 then '04' when char_length(TRIM(both scedula))=10 then '05'  else '07' end AS tpidCliente, "+ "case when char_length(trim(both sruc))=13 then sruc when char_length(TRIM(both scedula))=10 then scedula  else spasaporte end AS idCliente, "+ "to_char((c.codigo::int2)::int4,'FM09') as tipocomprobante, "+ "d.subsiniva AS baseImponible, "+ "d.subconiva AS baseImpGrav, "+ "d.ivavalor AS montoIVA, "+ "CASE WHEN d.ivavalor>0 THEN 2 ELSE 0 END AS porcentajeiva, "+ "d.icevalor as BaseimpICE, "+ "a.porice as porcentajeICE, "+ "d.icevalor as MontoICE, "+ "0 as montoivabienes, "+ "0 as porretbienes,  "+ "0 as valorretbienes, "+ "0 as montoivaservicios, "+ "0 as porretservicios, "+ "0 as valorretservicios, "+ "a.codigoret as codretair, "+ "d.subtotal as baseimpair, "+ "a.porcenret as porcentajeair, "+ "a.montoret as valretair "+ "from vdocuments d left join aneiva a on (d.code=a.code) "+ "left join sritabla c on (a.idtipdoc=c.idsritabla) "+ "left join sritabla r on (a.credtrib=r.idsritabla) "+ " where d.isaccount and not d.isanulado and a.tltx=1 and d.swaneiva and d.fecha >="+ alup(thisform.fsini)+" and d.fecha <="+alup(thisform.fsfin)+" and d.iddocu in "+ "(select distinct d.iddocu from gdoc g, dgdoc t, docuse d "+ " where g.tag='ANXVTA' and g.idgdoc=t.idgdoc and t.dtag=d.dtag and "+ " d.pdocode="+alup(iprd)+") ;"
+Error en la línea 1228: La instrucción no está en un procedimiento.
+if !sqli(q1,'dprinv') then
+Error en la línea 1232: La instrucción no está en un procedimiento.
+return
+Error en la línea 1233: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1234: La instrucción no está en un procedimiento.
+q1="select distinct sum(case when substr(dtag,1,8)='NOTDEBVE' then 1 else 0 end)::int4 as tnd, "+ "sum(case when substr(dtag,1,8)='NOTCREVE' then 1 else 0 end)::int4 as tnc, cliente "+ "from vdocusmall "+ " where isaccount and not isanulado and swaneiva and fecha >="+alup(thisform.fsini)+ " and fecha <="+alup(thisform.fsfin)+" and iddocu in "+ "(select distinct d.iddocu from gdoc g, dgdoc t, docuse d "+ " where g.tag='ANXNCC' and g.idgdoc=t.idgdoc and t.dtag=d.dtag and "+ " d.pdocode="+alup(iprd)+") "+ " group by cliente ;"
+Error en la línea 1247: La instrucción no está en un procedimiento.
+if !sqli(q1,'ncnd') then
+Error en la línea 1249: La instrucción no está en un procedimiento.
+return
+Error en la línea 1250: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1251: La instrucción no está en un procedimiento.
+sele cliente, tpidCliente, idCliente, tipocomprobante,  count(code) as numeroComprobantes,  sum(baseImponible) as baseImponible,  sum(baseImpGrav) as baseImpGrav,  porcentajeiva,  sum(montoIVA) as montoIVA  from dprinv  group by idCliente, tipocomprobante  into cursor anexosv
+Error en la línea 1261: La instrucción no está en un procedimiento.
+sele d.*, n.tnd, n.tnc from  anexosv d left join ncnd n on (d.Cliente=n.cliente)  into cursor anexosv
+Error en la línea 1264: La instrucción no está en un procedimiento.
+sele anexosv
+Error en la línea 1268: La instrucción no está en un procedimiento.
+go top
+Error en la línea 1269: La instrucción no está en un procedimiento.
+do while !eof()
+Error en la línea 1270: La instrucción no está en un procedimiento.
+sele tlv
+Error en la línea 1271: La instrucción no está en un procedimiento.
+appen blank
+Error en la línea 1272: La instrucción no está en un procedimiento.
+sele anexosv
+Error en la línea 1274: La instrucción no está en un procedimiento.
+do case
+Error en la línea 1276: La instrucción no está en un procedimiento.
+case alltrim(anexosv.idCliente)='9999999999999'
+Error en la línea 1277: La instrucción no está en un procedimiento.
+replace tlv.tpIdCliente							with '07'
+Error en la línea 1278: La instrucción no está en un procedimiento.
+replace tlv.idCliente							with anexosv.idCliente
+Error en la línea 1279: La instrucción no está en un procedimiento.
+otherwise
+Error en la línea 1280: La instrucción no está en un procedimiento.
+replace tlv.tpIdCliente							with anexosv.tpIdCliente 
+Error en la línea 1281: La instrucción no está en un procedimiento.
+replace tlv.idCliente							with anexosv.idCliente 
+Error en la línea 1282: La instrucción no está en un procedimiento.
+endcase
+Error en la línea 1283: La instrucción no está en un procedimiento.
+replace tlv.tipoComprobante 	 					with '18'
+Error en la línea 1285: La instrucción no está en un procedimiento.
+replace tlv.fechaRegistro	 						with fsfin
+Error en la línea 1286: La instrucción no está en un procedimiento.
+replace tlv.numeroComprobantes						with anexosv.numeroComprobantes
+Error en la línea 1287: La instrucción no está en un procedimiento.
+replace tlv.femision 								with fsfin
+Error en la línea 1288: La instrucción no está en un procedimiento.
+replace tlv.baseImponible							with anexosv.baseImponible
+Error en la línea 1289: La instrucción no está en un procedimiento.
+replace tlv.ivaPresuntivo							with "N"
+Error en la línea 1290: La instrucción no está en un procedimiento.
+replace tlv.baseImpGrav								with anexosv.baseImpGrav
+Error en la línea 1291: La instrucción no está en un procedimiento.
+replace tlv.porcentajeIva							with anexosv.porcentajeiva
+Error en la línea 1292: La instrucción no está en un procedimiento.
+replace tlv.montoIva								with anexosv.montoIva
+Error en la línea 1293: La instrucción no está en un procedimiento.
+replace tlv.baseImpIce								with 0.00
+Error en la línea 1294: La instrucción no está en un procedimiento.
+replace tlv.porcentajeIce							with 0
+Error en la línea 1295: La instrucción no está en un procedimiento.
+replace tlv.montoIce								with 0.00
+Error en la línea 1296: La instrucción no está en un procedimiento.
+replace tlv.montoIvaBienes							with 0
+Error en la línea 1297: La instrucción no está en un procedimiento.
+replace tlv.porRetBienes							with 0
+Error en la línea 1298: La instrucción no está en un procedimiento.
+replace tlv.valorRetBienes							with 0
+Error en la línea 1299: La instrucción no está en un procedimiento.
+replace tlv.montoIvaServicios						with 0
+Error en la línea 1300: La instrucción no está en un procedimiento.
+replace tlv.porRetServicios							with 0
+Error en la línea 1301: La instrucción no está en un procedimiento.
+replace tlv.valorRetServicios						with 0
+Error en la línea 1302: La instrucción no está en un procedimiento.
+replace tlv.retPresuntiva							with 'N'
+Error en la línea 1303: La instrucción no está en un procedimiento.
+replace tlv.codRetAir								with  space(5)
+Error en la línea 1304: La instrucción no está en un procedimiento.
+replace tlv.baseImpAir								with 0.00
+Error en la línea 1305: La instrucción no está en un procedimiento.
+replace tlv.porcentajeAir							with 0
+Error en la línea 1306: La instrucción no está en un procedimiento.
+replace tlv.valRetAir								with 0.00
+Error en la línea 1307: La instrucción no está en un procedimiento.
+sele dprinv
+Error en la línea 1309: La instrucción no está en un procedimiento.
+skip
+Error en la línea 1310: La instrucción no está en un procedimiento.
+enddo
+Error en la línea 1311: La instrucción no está en un procedimiento.
+sele tlv
+Error en la línea 1312: La instrucción no está en un procedimiento.
+q1="select distinct d.code, "+ "to_char((c.codigo::int2)::int4,'FM09') as docmodificado, "+ "substring(to_char(a.numserie2,'FM0009999') from char_length(to_char(a.numserie2,'FM0009999'))-5 for char_length(to_char(a.numserie2,'FM0009999'))-4 ) as estabmodificado, "+ "substring(to_char(a.numserie2,'FM0009999') from char_length(to_char(a.numserie2,'FM0009999'))-2 for (char_length(to_char(a.numserie2,'FM0009999')))) as ptoemimodificado, "+ "to_char(a.numsecue2,'FM0000009') as secmodificado, "+ "a.fecha2 AS fechaemimodificado, "+ "to_char(a.numauto2,'FM0000000099') as autmodificado "+ "from vdocusmall d left join vdocusmall s on (d.linkdoc=s.code) "+ "left join aneiva a on (s.code=a.code) "+ "left join sritabla c on (a.idtipdoc=c.idsritabla) "+ "left join sritabla r on (a.credtrib=r.idsritabla) "+ " where d.isaccount and not d.isanulado and a.tltx=1 and d.swaneiva and d.fecha >="+alup(thisform.fsini)+ " and d.fecha <="+alup(thisform.fsfin)+" and d.iddocu in "+ "(select distinct d.iddocu from gdoc g, dgdoc t, docuse d "+ " where g.tag='ANXNCC' and g.idgdoc=t.idgdoc and t.dtag=d.dtag and "+ " d.pdocode="+alup(iprd)+");"
+Error en la línea 1331: La instrucción no está en un procedimiento.
+if !sqli(q1,'dcc') then
+Error en la línea 1333: La instrucción no está en un procedimiento.
+return
+Error en la línea 1334: La instrucción no está en un procedimiento.
+endif
+Error en la línea 1335: La instrucción no está en un procedimiento.
+Select dcc
+Error en la línea 1337: La instrucción no está en un procedimiento.
+If Reccount()>0
+Error en la línea 1338: La instrucción no está en un procedimiento.
+go top
+Error en la línea 1339: La instrucción no está en un procedimiento.
+Scan
+Error en la línea 1340: La instrucción no está en un procedimiento.
+scatter memvar
+Error en la línea 1341: La instrucción no está en un procedimiento.
+Update tlc Set docModificado=m.docModificado, fechaEmiModificado=m.fechaEmiModificado,  estabModificado=m.estabModificado, ptoEmiModificado=m.ptoEmiModificado,  secModificado=m.secModificado, autModificado=m.autModificado  Where code=m.code
+Error en la línea 1346: La instrucción no está en un procedimiento.
+Select dcc
+Error en la línea 1348: La instrucción no está en un procedimiento.
+EndScan
+Error en la línea 1349: La instrucción no está en un procedimiento.
+EndIf
+Error en la línea 1350: La instrucción no está en un procedimiento.
+wait 'Generando archivo de Identificación' wind nowait
+Error en la línea 1501: La instrucción no está en un procedimiento.
+archivo=thisform.destino+'ID'+p+'.ANE'
+Error en la línea 1502: La instrucción no está en un procedimiento.
+db='ID'+p
+Error en la línea 1503: La instrucción no está en un procedimiento.
+sele empresas
+Error en la línea 1504: La instrucción no está en un procedimiento.
+copy to &archivo type sdf
+Error en la línea 1505: La instrucción no está en un procedimiento.
+copy to &db
+Error en la línea 1506: La instrucción no está en un procedimiento.
+wait 'Generando archivo de transaciones locales' wind nowait
+Error en la línea 1508: La instrucción no está en un procedimiento.
+archivo=thisform.destino+'TLC'+p+'.ANE'
+Error en la línea 1509: La instrucción no está en un procedimiento.
+db='TLC'+p
+Error en la línea 1510: La instrucción no está en un procedimiento.
+sele tlC
+Error en la línea 1511: La instrucción no está en un procedimiento.
+copy to &archivo type sdf
+Error en la línea 1516: La instrucción no está en un procedimiento.
+copy to &db
+Error en la línea 1517: La instrucción no está en un procedimiento.
+archivo=thisform.destino+'TLV'+p+'.ANE'
+Error en la línea 1519: La instrucción no está en un procedimiento.
+db='TLV'+p
+Error en la línea 1520: La instrucción no está en un procedimiento.
+sele tlV
+Error en la línea 1521: La instrucción no está en un procedimiento.
+copy to &archivo type sdf
+Error en la línea 1526: La instrucción no está en un procedimiento.
+copy to &db
+Error en la línea 1527: La instrucción no está en un procedimiento.
+wait 'Generando archivo de N/C y N/D' wind nowait
+Error en la línea 1531: La instrucción no está en un procedimiento.
+Thisform.cxml()
+Error en la línea 1547: La instrucción no está en un procedimiento.
+wait 'Proceso concluido' wind nowait
+Error en la línea 1548: La instrucción no está en un procedimiento.
+ENDPROC
+Error en la línea 1550: Error de anidamiento.
+ýù´þ
+Error en la línea 1554: No se reconoce el verbo de comando.
+\ýQ÷
+Error en la línea 1555: La instrucción no está en un procedimiento.
+\ýQ÷
+Error en la línea 1556: La instrucción no está en un procedimiento.
+\ýQ÷
+Error en la línea 1557: La instrucción no está en un procedimiento.
+T÷
+Error en la línea 1558: No se reconoce el verbo de comando.
+ýùŒ
+Error en la línea 1564: No se reconoce el verbo de comando.
+þ
+Error en la línea 1565: No se reconoce el verbo de comando.
+ýù¡þ
+Error en la línea 1569: No se reconoce el verbo de comando.
+ýù"þ
+Error en la línea 1570: No se reconoce el verbo de comando.
+%
+Error en la línea 1571: No se reconoce el verbo de comando.
+$
+Error en la línea 1572: No se reconoce el verbo de comando.
+
+Error en la línea 1573: No se reconoce el verbo de comando.
+ýùŠþ
+Error en la línea 1574: No se reconoce el verbo de comando.
+Xýþ
+Error en la línea 1585: No se reconoce el verbo de comando.
+ýù.þ
+Error en la línea 1591: No se reconoce el verbo de comando.
+ýùUþ
+Error en la línea 1596: No se reconoce el verbo de comando.
+ýù†"þ
+Error en la línea 1597: No se reconoce el verbo de comando.
+ýù'þ
+Error en la línea 1602: No se reconoce el verbo de comando.
+÷_
+Error en la línea 1603: No se reconoce el verbo de comando.
+÷`
+Error en la línea 1604: No se reconoce el verbo de comando.
+÷a
+Error en la línea 1605: No se reconoce el verbo de comando.
+÷b
+Error en la línea 1606: No se reconoce el verbo de comando.
+÷c
+Error en la línea 1607: No se reconoce el verbo de comando.
+÷d
+Error en la línea 1608: No se reconoce el verbo de comando.
+÷
+Error en la línea 1609: No se reconoce el verbo de comando.
+
+Error en la línea 1611: No se reconoce el verbo de comando.
+4
+Error en la línea 1612: La instrucción no está en un procedimiento.
+
+Error en la línea 1613: No se reconoce el verbo de comando.
+
+Error en la línea 1615: No se reconoce el verbo de comando.
+)
+Error en la línea 1616: No se reconoce el verbo de comando.
+€A­ÇA
+Error en la línea 1634: No se reconoce el verbo de comando.
+commandbutton
+Error en la línea 1635: No se reconoce el verbo de comando.
+commandbutton
+Error en la línea 1636: No se reconoce el verbo de comando.
+Left = 289
+Error en la línea 1637: La instrucción no está en un procedimiento.
+Height = 27
+Error en la línea 1638: La instrucción no está en un procedimiento.
+Width = 84
+Error en la línea 1639: La instrucción no está en un procedimiento.
+Caption = "SALIR"
+Error en la línea 1640: La instrucción no está en un procedimiento.
+Name = "Command3"
+Error en la línea 1641: La instrucción no está en un procedimiento.
+thisform.release
+Error en la línea 1643: La instrucción no está en un procedimiento.
+ENDPROC
+Error en la línea 1644: Error de anidamiento.
