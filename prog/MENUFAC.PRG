@@ -1,6 +1,6 @@
 *       *********************************************************
 *       *                                                         
-*       * 16/06/2017            MENUFAC.PRG             08:49:53  
+*       * 01/08/2017            MENUFAC.PRG             11:30:54  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
@@ -27,27 +27,27 @@
 SET SYSMENU TO
 SET SYSMENU AUTOMATIC
 
-DEFINE PAD _4xy0ixgdq OF _MSYSMENU PROMPT "Ventas" COLOR SCHEME 3 ;
+DEFINE PAD _4z80ooi6v OF _MSYSMENU PROMPT "Ventas" COLOR SCHEME 3 ;
 	KEY ALT+V, ""
-DEFINE PAD _4xy0ixgdr OF _MSYSMENU PROMPT "Clientes" COLOR SCHEME 3 ;
+DEFINE PAD _4z80ooi6w OF _MSYSMENU PROMPT "Clientes" COLOR SCHEME 3 ;
 	KEY ALT+C, ""
-DEFINE PAD _4xy0ixgds OF _MSYSMENU PROMPT "Reportes" COLOR SCHEME 3 ;
+DEFINE PAD _4z80ooi6x OF _MSYSMENU PROMPT "Reportes" COLOR SCHEME 3 ;
 	KEY ALT+R, ""
-DEFINE PAD _4xy0ixgdt OF _MSYSMENU PROMPT "N/C y N/D" COLOR SCHEME 3 ;
+DEFINE PAD _4z80ooi6y OF _MSYSMENU PROMPT "N/C y N/D" COLOR SCHEME 3 ;
 	KEY ALT+N, ""
-DEFINE PAD _4xy0ixgdu OF _MSYSMENU PROMPT "Impresión Documentos" COLOR SCHEME 3 ;
+DEFINE PAD _4z80ooi6z OF _MSYSMENU PROMPT "Impresión Documentos" COLOR SCHEME 3 ;
 	KEY ALT+I, ""
-DEFINE PAD _4xy0ixgdv OF _MSYSMENU PROMPT "Documentos" COLOR SCHEME 3 ;
+DEFINE PAD _4z80ooi70 OF _MSYSMENU PROMPT "Documentos" COLOR SCHEME 3 ;
 	KEY ALT+D, ""
-DEFINE PAD _4xy0ixgdw OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
+DEFINE PAD _4z80ooi71 OF _MSYSMENU PROMPT "Salir" COLOR SCHEME 3 ;
 	KEY ALT+S, ""
-ON PAD _4xy0ixgdq OF _MSYSMENU ACTIVATE POPUP ventas
-ON PAD _4xy0ixgdr OF _MSYSMENU ACTIVATE POPUP nuevoeleme
-ON PAD _4xy0ixgds OF _MSYSMENU ACTIVATE POPUP reportes
-ON PAD _4xy0ixgdt OF _MSYSMENU ACTIVATE POPUP ncynd
-ON PAD _4xy0ixgdu OF _MSYSMENU ACTIVATE POPUP impresiónd
-ON PAD _4xy0ixgdv OF _MSYSMENU ACTIVATE POPUP documentos
-ON PAD _4xy0ixgdw OF _MSYSMENU ACTIVATE POPUP salir
+ON PAD _4z80ooi6v OF _MSYSMENU ACTIVATE POPUP ventas
+ON PAD _4z80ooi6w OF _MSYSMENU ACTIVATE POPUP nuevoeleme
+ON PAD _4z80ooi6x OF _MSYSMENU ACTIVATE POPUP reportes
+ON PAD _4z80ooi6y OF _MSYSMENU ACTIVATE POPUP ncynd
+ON PAD _4z80ooi6z OF _MSYSMENU ACTIVATE POPUP impresiónd
+ON PAD _4z80ooi70 OF _MSYSMENU ACTIVATE POPUP documentos
+ON PAD _4z80ooi71 OF _MSYSMENU ACTIVATE POPUP salir
 
 DEFINE POPUP ventas MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF ventas PROMPT "Doc. Ventas"
@@ -55,20 +55,22 @@ DEFINE BAR 2 OF ventas PROMPT "Cotizaciones"
 DEFINE BAR 3 OF ventas PROMPT "Doc. Generados"
 DEFINE BAR 4 OF ventas PROMPT "\-"
 DEFINE BAR 5 OF ventas PROMPT "Canje de Retenciones"
-DEFINE BAR 6 OF ventas PROMPT "Anticipos Clientes"
-DEFINE BAR 7 OF ventas PROMPT "\-"
-DEFINE BAR 8 OF ventas PROMPT "liquidacions en Ventas"
-DEFINE BAR 9 OF ventas PROMPT "\-"
-DEFINE BAR 10 OF ventas PROMPT "Servicios"
-DEFINE BAR 11 OF ventas PROMPT "Sujetos"
+DEFINE BAR 6 OF ventas PROMPT "Registro de Retenciones Recibidas"
+DEFINE BAR 7 OF ventas PROMPT "Anticipos Clientes"
+DEFINE BAR 8 OF ventas PROMPT "\-"
+DEFINE BAR 9 OF ventas PROMPT "liquidacions en Ventas"
+DEFINE BAR 10 OF ventas PROMPT "\-"
+DEFINE BAR 11 OF ventas PROMPT "Servicios"
+DEFINE BAR 12 OF ventas PROMPT "Sujetos"
 ON SELECTION BAR 1 OF ventas do form fac0101
 ON SELECTION BAR 2 OF ventas do form fac0103
 ON SELECTION BAR 3 OF ventas do form fac0101b
 ON SELECTION BAR 5 OF ventas do form  fac0107
-ON SELECTION BAR 6 OF ventas do form fac0104
-ON SELECTION BAR 8 OF ventas do form fac0113
-ON SELECTION BAR 10 OF ventas do form adq0109
-ON SELECTION BAR 11 OF ventas do form adm0303
+ON SELECTION BAR 6 OF ventas do form retenreci
+ON SELECTION BAR 7 OF ventas do form fac0104
+ON SELECTION BAR 9 OF ventas do form fac0113
+ON SELECTION BAR 11 OF ventas do form adq0109
+ON SELECTION BAR 12 OF ventas do form adm0303
 
 DEFINE POPUP nuevoeleme MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF nuevoeleme PROMPT "Cheques Recibidos"
@@ -235,7 +237,7 @@ DEFINE BAR 1 OF impresiónd PROMPT "Activar Impresión de Documentos"
 DEFINE BAR 2 OF impresiónd PROMPT "Desactivar Impresión de Doc. Ventas"
 ON SELECTION BAR 1 OF impresiónd do form actimpdoc
 ON SELECTION BAR 2 OF impresiónd ;
-	DO _4xy0ixgf1 ;
+	DO _4z80ooi7q ;
 	IN LOCFILE("PROG\MENUFAC" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MENUFAC?")
 
 DEFINE POPUP documentos MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -265,10 +267,10 @@ DEFINE POPUP salir MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF salir PROMPT "Regresar al Menú Princ."
 DEFINE BAR 2 OF salir PROMPT "Abandonar el Sistema"
 ON SELECTION BAR 1 OF salir ;
-	DO _4xy0ixgfh ;
+	DO _4z80ooi7r ;
 	IN LOCFILE("PROG\MENUFAC" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MENUFAC?")
 ON SELECTION BAR 2 OF salir ;
-	DO _4xy0ixgfi ;
+	DO _4z80ooi86 ;
 	IN LOCFILE("PROG\MENUFAC" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MENUFAC?")
 
 
@@ -283,18 +285,18 @@ read event
 
 *       *********************************************************
 *       *                                                         
-*       * _4XY0IXGF1  ON SELECTION BAR 2 OF POPUP impresiónd      
+*       * _4Z80OOI7Q  ON SELECTION BAR 2 OF POPUP impresiónd      
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
-*       * From Menu:  MENUFAC.PRG,            Record:  122        
+*       * From Menu:  MENUFAC.PRG,            Record:  123        
 *       * Called By:  ON SELECTION BAR 2 OF POPUP impresiónd      
 *       * Prompt:     Desactivar Impresión de Doc. Ventas         
 *       * Snippet:    1                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _4xy0ixgf1
+PROCEDURE _4z80ooi7q
 if type('_screen.objimp')='O'
 	_screen.removeobject('objimp')
 endif
@@ -302,18 +304,18 @@ endif
 
 *       *********************************************************
 *       *                                                         
-*       * _4XY0IXGFH  ON SELECTION BAR 1 OF POPUP salir           
+*       * _4Z80OOI7R  ON SELECTION BAR 1 OF POPUP salir           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
-*       * From Menu:  MENUFAC.PRG,            Record:  140        
+*       * From Menu:  MENUFAC.PRG,            Record:  141        
 *       * Called By:  ON SELECTION BAR 1 OF POPUP salir           
 *       * Prompt:     Regresar al Menú Princ.                     
 *       * Snippet:    2                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _4xy0ixgfh
+PROCEDURE _4z80ooi7r
 do while type('_screen.activeform')='O'
 	_screen.activeform.release
 enddo	
@@ -331,18 +333,18 @@ return
 
 *       *********************************************************
 *       *                                                         
-*       * _4XY0IXGFI  ON SELECTION BAR 2 OF POPUP salir           
+*       * _4Z80OOI86  ON SELECTION BAR 2 OF POPUP salir           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
-*       * From Menu:  MENUFAC.PRG,            Record:  141        
+*       * From Menu:  MENUFAC.PRG,            Record:  142        
 *       * Called By:  ON SELECTION BAR 2 OF POPUP salir           
 *       * Prompt:     Abandonar el Sistema                        
 *       * Snippet:    3                                           
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _4xy0ixgfi
+PROCEDURE _4z80ooi86
 deactivate menu _msysmenu
 clea even
 clea read

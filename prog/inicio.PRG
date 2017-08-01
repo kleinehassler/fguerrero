@@ -1,5 +1,5 @@
 local ruta
-ruta=sys(2003)+'\bdd;'+sys(2003)+'\prog;'+sys(2003)+'\form;'+sys(2003)+'\report;'+sys(2003)+'\varios'
+ruta=sys(2003)+'\bdd;'+sys(2003)+'\prog;'+sys(2003)+'\form;'+sys(2003)+'\form2;'+sys(2003)+'\report;'+sys(2003)+'\varios'
 SET PATH TO &ruta
 ruta=sys(2003)+'\tempo'
 SET DEFA TO &ruta

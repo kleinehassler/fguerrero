@@ -380,3 +380,12 @@ WITH (
   OIDS = FALSE
 )
 ;
+
+
+**** Actualiazacion Retenrecibidas
+alter table retenreci add column numret character varying(25);
+
+
+
+*** Actulizar en Cheques el Tercero
+alter table cheques add column nomter character varying(50);

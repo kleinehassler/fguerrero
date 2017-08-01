@@ -1,5 +1,5 @@
 local ruta
-ruta=sys(2003)+'\bdd;'+sys(2003)+'\prog;'+sys(2003)+'\form;'+sys(2003)+'\report;'+sys(2003)+'\varios;'+sys(2003)+'\migrar'
+ruta=sys(2003)+'\bdd;'+sys(2003)+'\prog;'+sys(2003)+'\form;'+sys(2003)+'\form2;'+sys(2003)+'\report;'+sys(2003)+'\varios;'+sys(2003)+'\migrar'
 SET PATH TO &ruta
 ruta=sys(2003)+'\tempo'
 SET DEFA TO &ruta
@@ -97,8 +97,8 @@ mascara1='999,999.99'
 mascara2='999,999,999.99'
 mascara3='9,999.99999'
 mascarae='9,999,999'
-finip=date(2013,01,01)
-ffinp=date(2013,12,31)
+finip=date(2017,01,01)
+ffinp=date(2017,12,31)
 final=0
 cta=0
 fta=tipolet('Times New Roman')
@@ -114,9 +114,8 @@ cgru=''
 q1=''
 idcajero=1
 
-*basedd='brame17'
+
 basedd='portilla17'
-*basedd='guerrero17'
 
 x=0
 consindes=.f.
