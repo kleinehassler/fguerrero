@@ -384,7 +384,7 @@ WITH (
 
 **** Actualiazacion Retenrecibidas
 alter table retenreci add column numret character varying(25);
-
+alter table retenreci add column estado boolean default 'false'
 
 
 *** Actulizar en Cheques el Tercero
